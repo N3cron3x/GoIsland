@@ -1,0 +1,45 @@
+@GoIsland.Api_HostAddress = http://localhost:5057
+@GoIsland.Api_Token = paste-token-here
+
+GET {{GoIsland.Api_HostAddress}}/api/health
+Accept: application/json
+
+###
+
+POST {{GoIsland.Api_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Carlos Arias",
+  "email": "carlos@example.com",
+  "password": "Password123",
+  "role": "Tourist"
+}
+
+###
+
+POST {{GoIsland.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "carlos@example.com",
+  "password": "Password123"
+}
+
+###
+
+GET {{GoIsland.Api_HostAddress}}/api/auth/me
+Authorization: Bearer {{GoIsland.Api_Token}}
+Accept: application/json
+
+###
+
+PUT {{GoIsland.Api_HostAddress}}/api/users/profile
+Authorization: Bearer {{GoIsland.Api_Token}}
+Content-Type: application/json
+
+{
+  "fullName": "Carlos Arias Updated"
+}
+
+###

@@ -1,0 +1,9 @@
+using GoIsland.Api.DTOs.Auth;
+
+namespace GoIsland.Api.Services.Auth;
+
+public interface IAuthService
+{
+    Task<AuthResponse?> RegisterAsync(RegisterRequest request);
+    Task<AuthResponse?> LoginAsync(LoginRequest request);
+}
