@@ -9,3 +9,4 @@ backend/GoIsland.Api/appsettings.json
 *.pdf
 *.docx
 PLAN_BACKEND_GOISLAND.md
+backend/GoIsland.Api/appsettings.Development.json
